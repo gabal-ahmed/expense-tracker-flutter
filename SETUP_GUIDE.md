@@ -2,6 +2,14 @@
 
 الدليل ده بيمشيك من أول `git clone` لحد ما الأبلكيشن يفتح على الإيميوليتور أو الموبايل.
 
+## 🔗 اللينكات
+
+| | |
+|---|---|
+| صفحة المشروع على GitHub | https://github.com/gabal-ahmed/expense-tracker-flutter |
+| لينك الـ Clone | `https://github.com/gabal-ahmed/expense-tracker-flutter.git` |
+| تحميل ZIP (لو مش عايز تستخدم Git) | https://github.com/gabal-ahmed/expense-tracker-flutter/archive/refs/heads/main.zip |
+
 > **مهم:** الأبلكيشن بيستخدم `sqflite` (قاعدة بيانات محلية)، فلازم يشتغل على **Android** (إيميوليتور أو موبايل).
 > مش هيشتغل صح على Windows desktop أو Chrome.
 
@@ -54,6 +62,16 @@ cd C:\projects
 git clone https://github.com/gabal-ahmed/expense-tracker-flutter.git
 cd expense-tracker-flutter
 ```
+
+**أو من غير Git:** نزّل الـ ZIP من
+https://github.com/gabal-ahmed/expense-tracker-flutter/archive/refs/heads/main.zip
+وفكّه في `C:\projects`. هيطلعلك فولدر اسمه `expense-tracker-flutter-main`، ادخله بـ:
+```
+cd C:\projects\expense-tracker-flutter-main
+```
+
+**أو من Android Studio:** File ← New ← Project from Version Control ← حط اللينك
+`https://github.com/gabal-ahmed/expense-tracker-flutter.git` ← Clone
 
 > ⚠️ ماتحطش المشروع في مسار فيه مسافات أو عربي أو طويل جداً (زي Desktop جوه OneDrive). ده بيعمل مشاكل مع Gradle.
 

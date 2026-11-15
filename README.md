@@ -1,5 +1,26 @@
 # 💰 Expense Tracker App
 
+## 🚀 تشغيل سريع / Quick Start
+
+| | |
+|---|---|
+| **صفحة المشروع** | https://github.com/gabal-ahmed/expense-tracker-flutter |
+| **لينك الـ Clone (HTTPS)** | `https://github.com/gabal-ahmed/expense-tracker-flutter.git` |
+| **تحميل ZIP (من غير Git)** | https://github.com/gabal-ahmed/expense-tracker-flutter/archive/refs/heads/main.zip |
+| **دليل التشغيل الكامل** | [SETUP_GUIDE.md](SETUP_GUIDE.md) |
+
+```
+git clone https://github.com/gabal-ahmed/expense-tracker-flutter.git
+cd expense-tracker-flutter
+flutter pub get
+flutter run
+```
+
+> محتاج Flutter 3.44.2 (أو 3.35+) و Android Studio وإيميوليتور أو موبايل أندرويد.
+> كل التفاصيل خطوة بخطوة في [SETUP_GUIDE.md](SETUP_GUIDE.md).
+
+---
+
 A beautiful, functional Flutter mobile application for tracking personal expenses with category-based filtering, data persistence, and an intuitive user interface.
 
 ## 📋 Project Overview
