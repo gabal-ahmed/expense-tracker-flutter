@@ -160,6 +160,26 @@ build\app\outputs\flutter-apk\app-release.apk
 | `flutter.sdk not set in local.properties` | شغّل `flutter pub get` جوه فولدر المشروع (بيعمل الملف لوحده). |
 | مشاكل غريبة في المسار | انقل المشروع لمسار قصير من غير مسافات، مثلاً `C:\projects\expense-tracker-flutter` |
 
+### `There is not enough space on the disk` (الـ C مليان)
+Gradle بينزّل حوالي 2-4 جيجا في `C:\Users\<اسمك>\.gradle`. انقله لـ D (في **cmd**):
+```
+taskkill /f /im java.exe
+rmdir /s /q "%USERPROFILE%\.gradle"
+setx GRADLE_USER_HOME "D:\gradle-home"
+setx PUB_CACHE "D:\pub-cache"
+```
+**اقفل الـ cmd وافتح واحد جديد** (`setx` مابيأثرش على الشباك المفتوح)، واتأكد:
+```
+echo %GRADLE_USER_HOME%
+```
+لازم يطبع `D:\gradle-home`. بعدين:
+```
+cd /d D:\expense-tracker-flutter
+flutter clean
+flutter pub get
+flutter run -d <device_id>
+```
+
 ### الحل الشامل لو حاجة باظت
 ```
 flutter clean
