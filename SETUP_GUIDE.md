@@ -180,6 +180,18 @@ flutter pub get
 flutter run -d <device_id>
 ```
 
+### `What went wrong: 25.0.4` (أو أي رقم 25 أو أكبر)
+ده رقم نسخة Java، و Gradle 8.14 مش بيدعم Java 25. لازم Flutter يستخدم **JDK 17**:
+1. نزّل **Temurin JDK 17 (Windows x64, .msi)** من https://adoptium.net/temurin/releases/?version=17
+2. وقت التسطيب غيّر المسار لـ `D:\jdk17` لو الـ C مليان.
+3. في cmd:
+   ```
+   flutter config --jdk-dir "D:\jdk17"
+   ```
+4. اقفل الـ cmd وافتح واحد جديد، وبعدين `flutter clean` ثم `flutter run -d <device_id>`.
+
+اتأكد بـ `flutter doctor -v` إن تحت Android toolchain مكتوب `Java version ... 17`.
+
 ### الحل الشامل لو حاجة باظت
 ```
 flutter clean
