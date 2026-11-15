@@ -192,6 +192,21 @@ flutter run -d <device_id>
 
 اتأكد بـ `flutter doctor -v` إن تحت Android toolchain مكتوب `Java version ... 17`.
 
+### `Failed to install the following SDK components: build-tools;35.0.0`
+غالباً الـ C مليان (الـ Android SDK بيبقى على `C:\Users\<اسمك>\AppData\Local\Android\Sdk`) أو الـ licenses مش متوافق عليها.
+- لو على C أكتر من 3 جيجا فاضيين:
+  ```
+  flutter doctor --android-licenses
+  ```
+  وبعدين Android Studio ← More Actions ← SDK Manager ← SDK Tools ← علّم **Show Package Details** ← تحت **Android SDK Build-Tools** علّم **35.0.0** ← Apply.
+- لو الـ C مليان، انقل الـ SDK لـ D (اقفل Android Studio الأول):
+  ```
+  robocopy "%LOCALAPPDATA%\Android\Sdk" "D:\Android\Sdk" /E /MOVE
+  flutter config --android-sdk "D:\Android\Sdk"
+  setx ANDROID_HOME "D:\Android\Sdk"
+  ```
+  افتح Android Studio ← SDK Manager ← **Android SDK Location** ← Edit ← `D:\Android\Sdk`، وبعدين سطّب Build-Tools 35.0.0 زي فوق.
+
 ### الحل الشامل لو حاجة باظت
 ```
 flutter clean
