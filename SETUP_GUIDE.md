@@ -153,6 +153,7 @@ build\app\outputs\flutter-apk\app-release.apk
 |---|---|
 | `'flutter' is not recognized` | الـ PATH مش متظبط. راجع خطوة تسطيب Flutter وافتح terminal جديد. |
 | `No connected devices` | شغّل الإيميوليتور أو وصّل الموبايل، وبعدين `flutter devices`. |
+| `flutter run` بيكتب `Downloading windows-x64...` أو بيسألك تختار Windows/Chrome | مفيش جهاز أندرويد شغال، فـ Flutter اختار Windows (والأبلكيشن مش هيشتغل عليه). اضغط `Ctrl+C`، شغّل الإيميوليتور أو وصّل الموبايل، اعمل `flutter devices` وخد الـ id، وبعدين `flutter run -d <id>` (مثلاً `flutter run -d emulator-5554`). |
 | `Android license status unknown` | `flutter doctor --android-licenses` |
 | `The method 'withValues' isn't defined` أو `initialValue` | نسخة Flutter قديمة. اعمل `flutter upgrade`. |
 | Gradle بيفشل أو بيعلّق | اتأكد من النت، وبعدين: `flutter clean` ثم `flutter pub get` ثم `flutter run` |
